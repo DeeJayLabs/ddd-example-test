@@ -1,11 +1,11 @@
 <?php
 
-require_once __DIR__.'/../vendor/autoload.php'; 
+require_once __DIR__ . '/../vendor/autoload.php';
 
-$app = new Silex\Application(); 
+$app = new Silex\Application();
 
-$app->get('/hello/{name}', function($name) use($app) { 
-    return 'Hello '.$app->escape($name); 
-}); 
+require __DIR__ . '/../app/services.php';
+
+require __DIR__ . '/../app/controllers.php';
 
 $app->run();
