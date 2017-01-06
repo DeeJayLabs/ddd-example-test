@@ -1,0 +1,11 @@
+TodoList\Domain\Model\Item\Item:
+    type: entity
+    table: items
+    repositoryClass: TodoList\Infrastructure\Repository\Doctrine\Person\ItemEntityRepository
+    id:
+        id:
+            type: item_id
+    fields:
+        title:
+            type: string
+            length: 255
