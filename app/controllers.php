@@ -2,6 +2,7 @@
 
 $app->get('/', function () use ($app) {
 
+    // TODO move to a service
     $items = $app['repository.item.doctrine']->findAll();
 
     return $app['twig']->render('index.html.twig', [
